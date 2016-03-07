@@ -98,5 +98,5 @@ This example adds a mapping from LDAP to `Auth` model:
 
 ## License
 
-**Waterlock LDAP Auth** is licensed under the MIT license. See the LICENSE file
+**Waterlock Multiple LDAP Auth** is licensed under the MIT license. See the LICENSE file
 for more details.
