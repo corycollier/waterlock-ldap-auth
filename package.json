@@ -1,51 +1,51 @@
 {
-  "name"        : "waterlock-multiple-ldap-auth",
-  "version"     : "0.2.2",
-  "description" : "Multiple LDAP authentication for waterlock. Forked from waterlock-ldap-auth",
-  "main"        : "index.js",
-  "scripts"     : {
+  "name": "waterlock-multiple-ldap-auth",
+  "version": "0.3.0",
+  "description": "Multiple LDAP authentication for waterlock. Forked from waterlock-ldap-auth",
+  "main": "index.js",
+  "scripts": {
     "test": "grunt travis"
   },
-  "repository" : {
-    "type" : "git",
-    "url"  : "https://github.com/corycollier/waterlock-multiple-ldap-auth"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/corycollier/waterlock-multiple-ldap-auth"
   },
-  "keywords" : [
+  "keywords": [
     "waterlock",
     "ldap",
     "authentication",
     "sails"
   ],
   "devDependencies": {
-    "coveralls"            : "*",
-    "grunt"                : "^0.4.5",
-    "grunt-cli"            : "^0.1.13",
-    "grunt-contrib-jshint" : "^0.11.2",
-    "istanbul"             : "*",
-    "jshint"               : "*",
-    "jshint-stylish"       : "^2.0.1",
-    "mocha"                : "*",
-    "proxyquire"           : "*",
-    "should"               : "*"
+    "coveralls": "*",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.11.2",
+    "istanbul": "*",
+    "jshint": "*",
+    "jshint-stylish": "^2.0.1",
+    "mocha": "*",
+    "proxyquire": "*",
+    "should": "*"
   },
   "dependencies": {
-    "ldapauth-fork" : "^2.2.19",
-    "lodash"        : "~3.10.1"
+    "ldapauth-fork": "^2.2.19",
+    "lodash": "~3.10.1"
   },
   "author": "Cory Collier <corycollier@corycollier.com>",
   "contributors": [
     {
-      "name"  : "Cory Collier",
-      "email" : "corycollier@corycollier.com"
+      "name": "Cory Collier",
+      "email": "corycollier@corycollier.com"
     }
   ],
-  "license" : "MIT",
+  "license": "MIT",
   "bugs": {
-    "url" : "https://github.com/corycollier/waterlock-multiple-ldap-auth/issues"
+    "url": "https://github.com/corycollier/waterlock-multiple-ldap-auth/issues"
   },
-  "homepage"     : "https://github.com/corycollier/waterlock-multiple-ldap-auth",
-  "preferGlobal" : false,
-  "engines" : {
-    "node" : ">=0.10"
+  "homepage": "https://github.com/corycollier/waterlock-multiple-ldap-auth",
+  "preferGlobal": false,
+  "engines": {
+    "node": ">=0.10"
   }
 }
