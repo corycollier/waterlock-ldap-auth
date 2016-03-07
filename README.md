@@ -1,17 +1,17 @@
-# Waterlock LDAP Auth
+# Waterlock Multiple LDAP Auth
 
-[![Build Status](https://travis-ci.org/waterlock/waterlock-ldap-auth.svg)](https://travis-ci.org/waterlock/waterlock-ldap-auth)
-[![NPM version](http://img.shields.io/npm/v/waterlock-ldap-auth.svg?style=flat)](http://badge.fury.io/js/waterlock-ldap-auth)
+[![Build Status](https://travis-ci.org/corycollier/waterlock-multiple-ldap-auth.svg)](https://travis-ci.org/corycollier/waterlock-multiple-ldap-auth)
+[![NPM version](http://img.shields.io/npm/v/waterlock-multiple-ldap-auth.svg?style=flat)](http://badge.fury.io/js/waterlock-multiple-ldap-auth)
 
-waterlock-ldap-auth is a module for [waterlock](http://waterlock.ninja/)
-providing a LDAP authentication method for users based on customizeable LDAP
+waterlock-multiple-ldap-auth is a module for [waterlock](http://waterlock.ninja/)
+providing multiple LDAP authentication methods for users based on customizable LDAP
 queries. It uses [ldapauth-fork](https://www.npmjs.com/package/ldapauth-fork) to
 faciliate LDAP authentication.
 
 ## Usage
 
 ```bash
-npm install waterlock-ldap-auth
+npm install waterlock-multiple-ldap-auth
 ```
 
 set the following option in your `waterlock.js` config file
@@ -19,7 +19,7 @@ set the following option in your `waterlock.js` config file
 ```js
 authMethod:[
   {
-    name: "waterlock-ldap-auth",
+    name: "waterlock-multiple-ldap-auth",
     connection: {
       url: "ldaps://ldap.example.com:636",
       bindDn: "uid=myadminusername,ou=users,o=example.com",
@@ -54,7 +54,7 @@ model.
 With the way waterlock is designed and this model you can override any of these
 attributes.
 
-waterlock-ldap-auth will create a new Auth and User if LDAP authentication
+waterlock-multiple-ldap-auth will create a new Auth and User if LDAP authentication
 succeeds but no Auth/User is found.
 
 ## Mapping LDAP attributes
@@ -65,7 +65,7 @@ automatically. Just add objects to the `attributes` property:
 ```js
 authMethod:[
   {
-    name: "waterlock-ldap-auth",
+    name: "waterlock-multiple-ldap-auth",
     connection: { ... },
     attributes: {
       uid: {
