@@ -1,7 +1,9 @@
-var proxyquire =  require('proxyquire');
-var should = require('should');
-var path = require('path');
-var waterlockPath = path.normalize(__dirname+'/waterlock.js');
+'use strict';
+var proxyquire =  require('proxyquire')
+  , should = require('should')
+  , path = require('path')
+  , waterlockPath = path.normalize(__dirname+'/waterlock.js')
+;
 
 var pathStub = {
   normalize: function(str){
@@ -10,7 +12,7 @@ var pathStub = {
 };
 
 exports.waterlock_ldap = proxyquire.noCallThru().load(
-  '../lib/waterlock-multiple-ldap-auth', 
+  '../lib/waterlock-multiple-ldap-auth',
   {
     'path': pathStub
   }

@@ -1,7 +1,8 @@
-var test_helper = require('../test_helper');
-var should = test_helper.should;
-var wl = test_helper.waterlock_ldap;
-var index = wl.actions;
+'use strict';
+var test_helper = require('../test_helper')
+  , wl     = test_helper.waterlock_ldap
+  , index  = wl.actions
+;
 
 describe('controller index', function(){
   it('should export login', function(done){

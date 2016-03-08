@@ -13,7 +13,7 @@ module.exports.waterlock = {
   //
   // used by auth methods for callback URI's using oauth and for password
   // reset links.
-  baseUrl: "http://localhost:1337",
+  baseUrl: 'http://localhost:1337',
 
   // Auth Method(s)
   //
@@ -23,13 +23,13 @@ module.exports.waterlock = {
   // of the local authentication method with password reset tokens disabled.
   authMethod: [
     {
-      name:"waterlock-multiple-ldap-auth",
+      name:'waterlock-multiple-ldap-auth',
       connection: {
-        url: "ldaps://ldap.example.com:636",
-        bindDn: "uid=myadminusername,ou=users,o=example.com",
-        bindCredentials: "mypassword",
-        searchBase: "ou=users,o=example.com",
-        searchFilter: "(uid={{username}})"
+        url: 'ldaps://ldap.example.com:636',
+        bindDn: 'uid=myadminusername,ou=users,o=example.com',
+        bindCredentials: 'mypassword',
+        searchBase: 'ou=users,o=example.com',
+        searchFilter: '(uid={{username}})'
       }
     }
   ],
@@ -42,12 +42,12 @@ module.exports.waterlock = {
   jsonWebTokens:{
 
     // CHANGE THIS SECRET
-    secret: "this is my secret",
+    secret: 'this is my secret',
     expiry:{
-      unit: "days",
-      length: "7"
+      unit: 'days',
+      length: '7'
     },
-    audience: "app name",
-    subject: "subject"
+    audience: 'app name',
+    subject: 'subject'
   }
 };
