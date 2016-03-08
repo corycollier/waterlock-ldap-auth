@@ -1,6 +1,6 @@
 {
   "name": "waterlock-multiple-ldap-auth",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Multiple LDAP authentication for waterlock. Forked from waterlock-ldap-auth",
   "main": "index.js",
   "scripts": {
