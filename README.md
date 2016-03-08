@@ -14,19 +14,39 @@ faciliate LDAP authentication.
 npm install waterlock-multiple-ldap-auth
 ```
 
-set the following option in your `waterlock.js` config file
+Configure the connection string as an object, naming each one as you see fit.
+The login action will iterate over these when a user attempts to login. The first
+connection to respond successfully, returns a success result.
 
 ```js
 authMethod:[
   {
     name: "waterlock-multiple-ldap-auth",
     connection: {
-      url: "ldaps://ldap.example.com:636",
-      bindDn: "uid=myadminusername,ou=users,o=example.com",
-      bindCredentials: "mypassword",
-      searchBase: "ou=users,o=example.com",
-      searchFilter: "(uid={{username}})",
-      cache: true
+      example : {
+        url             : "ldaps://ldap.example.com:636",
+        bindDn          : "uid=myadminusername,ou=users,o=example.com",
+        bindCredentials : "mypassword",
+        searchBase      : "ou=users,o=example.com",
+        searchFilter    : "(uid={{username}})",
+        cache           : true
+      },
+      insecure : {
+        url             : "ldap://ldap.insecure.com:389",
+        bindDn          : "uid=myadminusername,ou=users,o=insecure.com",
+        bindCredentials : "mypassword",
+        searchBase      : "ou=users,o=insecure.com",
+        searchFilter    : "(uid={{username}})",
+        cache           : true
+      },
+      cannibalCorpse : {
+        url             : "ldaps://ldap.cannibalcorpse.net:636",
+        bindDn          : "uid=george,ou=users,o=cannibalcorpse.net",
+        bindCredentials : "mypassword",
+        searchBase      : "ou=users,o=cannibalcorpse.net",
+        searchFilter    : "(uid={{username}})",
+        cache           : true
+      },
     },
     attributes: {}
   }
