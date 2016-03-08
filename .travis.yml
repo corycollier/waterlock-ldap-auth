@@ -4,3 +4,8 @@ node_js:
     - "0.12"
 before_install:
     - npm install -g grunt-cli
+install:
+  - npm install
+script:
+  - grunt jshint
+  - mocha tests
