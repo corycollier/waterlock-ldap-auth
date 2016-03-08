@@ -10,8 +10,8 @@ var pathStub = {
 };
 
 exports.waterlock_ldap = proxyquire.noCallThru().load(
-  '../lib/waterlock-ldap-auth', 
-  { 
+  '../lib/waterlock-multiple-ldap-auth', 
+  {
     'path': pathStub
   }
 );
