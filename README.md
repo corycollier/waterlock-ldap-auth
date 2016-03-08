@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/corycollier/waterlock-multiple-ldap-auth.svg)](https://travis-ci.org/corycollier/waterlock-multiple-ldap-auth)
 [![NPM version](http://img.shields.io/npm/v/waterlock-multiple-ldap-auth.svg?style=flat)](http://badge.fury.io/js/waterlock-multiple-ldap-auth)
+[![Downloads](http://img.shields.io/npm/dt/waterlock-multiple-ldap-auth.svg?style=flat)](https://www.npmjs.com/package/waterlock-multiple-ldap-auth)
+[![License](http://img.shields.io/npm/l/waterlock-multiple-ldap-auth.svg?style=flat)](https://github.com/corycollier/waterlock-multiple-ldap-auth/blob/develop/LICENSE)
 
 waterlock-multiple-ldap-auth is a module for [waterlock](http://waterlock.ninja/)
 providing multiple LDAP authentication methods for users based on customizable LDAP
@@ -14,7 +16,8 @@ faciliate LDAP authentication.
 npm install waterlock-multiple-ldap-auth
 ```
 
-Configure the connection string as an object, naming each one as you see fit.
+By modifying the configration settings in `config/waterlock.js`, you can configure
+the connection string as an object, naming each one as you see fit.
 The login action will iterate over these when a user attempts to login. The first
 connection to respond successfully, returns a success result.
 
@@ -42,7 +45,7 @@ authMethod:[
       cannibalCorpse : {
         url             : "ldaps://ldap.cannibalcorpse.net:636",
         bindDn          : "uid=george,ou=users,o=cannibalcorpse.net",
-        bindCredentials : "mypassword",
+        bindCredentials : "kill",
         searchBase      : "ou=users,o=cannibalcorpse.net",
         searchFilter    : "(uid={{username}})",
         cache           : true
